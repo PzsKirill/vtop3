@@ -1,0 +1,93 @@
+.footer {
+    position: relative;
+    border: 2px solid #f97247;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+    padding: 20px 10px 25px;
+    background: #311212;
+    @media (min-width: 769px) {
+        padding: 40px 0 24px;
+        border-width: 4px;
+        border-radius: 64px 64px 0 0;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @media (min-width: 769px) {
+            flex-direction: row;
+        }
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            @media (min-width: 769px) {
+                flex-direction: row;
+                gap: 24px;
+                align-items: flex-end;
+                margin-bottom: 0;
+            }
+            @media (min-width: 1440px) {
+                gap: 40px;
+            }
+            li { 
+                display: block;
+                @media (min-width: 769px) {
+                    display: none;
+                    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                        display: block;
+                    }
+                }
+                a {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 125%;
+                    text-align: center;
+                    color: #fff;
+                    @media (min-width: 769px) {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                        text-decoration-skip-ink: none;
+                        text-align: center;
+                        color: #f97247;
+                    }
+                }
+            }
+        }
+        .footer-net__container {
+            .net__name {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 125%;
+                text-align: left;
+                color: #fff;
+                margin-bottom: 8px;
+                @media (min-width: 769px) {
+                    font-size: 16px;
+                    margin-bottom: 14px;
+                    text-align: right;
+                }
+            }
+            .net-list {
+                display: flex;
+                gap: 8px;
+                li {
+                    a {
+                        & .back {
+                            transition: all 0.25s ease-in-out;
+                        }
+                        &:hover {
+                            .back {
+                                fill: #F29DA2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

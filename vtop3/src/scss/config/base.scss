@@ -1,0 +1,47 @@
+/** Базовые анимации: */
+@import 'keyframes';
+
+/** Стили для полноэкранного блока: */
+// @import "fullscreen";
+
+/*
+* (i) Стили будут применяться ко
+* всем классам содержащим *__container
+* Например header__container, main__container и т.д.
+*/
+// [class*='__container'] {
+//   max-width: rem($maxWidthContainer);
+//   margin: 0 auto;
+//   padding: 0 rem($mainOffset);
+// }
+
+// Стили отзывчивых картинок (IBG) ============================================
+[class*='-ibg'] {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+[class*='-ibg_contain'] {
+  img {
+    object-fit: contain;
+  }
+}
+
+// Оболочка ===================================================================
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+a {
+  transition: all 0.25s ease;
+}
